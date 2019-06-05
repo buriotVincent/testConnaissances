@@ -1,6 +1,7 @@
 let express = require('express');
 let session = require('cookie-session');
 let bodyParser = require('body-parser');
+let mysql = require('mysql');
 
 let urlencodedParser = bodyParser.urlencoded({extended: false});
 
@@ -22,6 +23,7 @@ app.get('/index', function(req, res) {
 app.post('/index/add', urlencodedParser, function(req, res) {
     if (req.body.newelement !== '') {
         req.session.array.push(req.body.newelement);
+        console.log(req.body.newelement);
     }
     res.redirect('/index');
 });
