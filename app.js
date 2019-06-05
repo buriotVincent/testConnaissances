@@ -23,7 +23,7 @@ app.post('/index/add', urlencodedParser, function(req, res) {
     if (req.body.newelement !== '') {
         req.session.array.push(req.body.newelement);
     }
-    res.resirect('/index');
+    res.redirect('/index');
 });
 
 app.get('/index/delete/:index', function(req, res) {
