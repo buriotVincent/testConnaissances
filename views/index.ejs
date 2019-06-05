@@ -1,0 +1,26 @@
+<!doctype html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Test Connaissances</title>
+    </head>
+    
+    <body>
+        <h1>Mon tableau :</h1>
+        
+        <ul>
+            <% array.forEach(function(element, index) { %>
+            <li><a href="/index/delete/<%= index %>">✘</a><%= element %></li>
+            <% }); %>
+        </ul>
+    
+        <form action="/index/add/"  method="post">
+            <label for="newelement">Ajouter un élément </label>
+            <input type="text" name="newelemnt">
+            <input type="submit">
+        </form>
+    </body>
+
+</html>
