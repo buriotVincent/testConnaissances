@@ -7,7 +7,7 @@ let urlencodedParser = bodyParser.urlencoded({extended: false});
 
 let app = express();
 
-app.use(session({secret: "supersecret2"}));
+app.use(session({secret: "supersecret3"}));
 
 app.use(function(req, res, next) {
     if (typeof(req.session.array) === 'undefined') {
